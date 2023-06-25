@@ -32,7 +32,23 @@ return {
       plugins = { ["dashboard-nvim"] = true },
     },
   },
-
+  --  catppuccin [theme]
+  --  https://github.com/catppuccin/nvim
+	{
+		"catppuccin/nvim",
+		event = "User LoadColorSchemes",
+		opts = {
+  		flavour = "mocha",
+  		show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
+  		term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)require("catppuccin").setup({
+  		flavour = "mocha", -- latte, frappe, macchiato, mocha
+  		background = { -- :h background
+      		light = "latte",
+      		dark = "mocha",
+  		},
+  		transparent_background = true, -- disables setting the background
+  	},
+	},
   -- tokyonight [theme]
   -- https://github.com/folke/tokyonight.nvim
   {
@@ -256,6 +272,7 @@ return {
         -- close notification immediately if notifications disabled
         if not vim.g.notifications_enabled then vim.api.nvim_win_close(win, true) end
       end,
+      background_colour = "#000000",                                                                          │
     },
     config = function(_, opts)
       local notify = require "notify"

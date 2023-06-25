@@ -16,8 +16,8 @@
 _G.base = {}
 
 -- Theme
---base.default_colorscheme = "astrotheme"
-base.default_colorscheme = "tokyonight-night"
+-- base.default_colorscheme = "astrotheme"
+base.default_colorscheme = "catppuccin"
 
 -- append/remove
 vim.opt.viewoptions:remove "curdir" -- disable saving current directory with views
@@ -79,8 +79,8 @@ local options = {
     history = 1000, -- Number of commands to remember in a history table (per buffer).
     swapfile = false, -- Ask what state to recover when opening a file that was not saved.
     wrap = true, -- Disable wrapping of lines longer than the width of window.
-    colorcolumn = "80", -- PEP8 like character limit vertical bar.
-    mouse = "a", -- Enable mouse support.
+    colorcolumn = "0", -- PEP8 like character limit vertical bar.
+    mouse = "", -- Disable mouse
     mousescroll = "ver:1,hor:0", -- Disables hozirontal scroll in neovim.
     guicursor = "n:blinkon200,i-ci-ve:ver25", -- Enable cursor blink.
     autochdir = true, -- Use current file dir as working dir (See project.nvim)
